@@ -10,7 +10,7 @@ function accesoBD(nombre,tamano){
 	return bd;
 	}
 	
-	
+//Se quito el codigo de la función y se envio a archivos.js	
 
 	
 function crearTabla(tx,bd,campos) {
