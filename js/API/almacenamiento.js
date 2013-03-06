@@ -11,3 +11,20 @@ function iniciarBD(){
 		alert('ok');
 		});
 }
+
+function leeHistorial(){
+	accesoBD().transaction(function(tx){
+		tx.executeSql('SELECT * FROM historial',[],
+		function(tx1,results){
+			for(i=0; i< results.rows.length;i++){
+				
+				alert(result.rows[i].hId);
+			}
+			
+		},function(err){
+		pgAlert('Error ase de Datos', err.code);
+});
+},function(err){
+	pgAlert('Error Base de Datos',err.code);
+});
+}
