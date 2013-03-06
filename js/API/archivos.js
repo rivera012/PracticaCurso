@@ -8,13 +8,9 @@ function subirArchivo(ruta){
 		function(result) {
 			pgAlert('Imagen subida',result.responseCode+'\n'+result.bytesSent);
 			
-			//Esta funcion se trajo del archivo de almacenamiento.js
-			
-			function transacciones(bd,ejecuciones){
-		db.transaction(accesoBD('test',100000),function(tx){
-			crearTabla(tx,'Reserva','rId,fecha,habitaciones,personas,estancia')}, alert("Error processing SQL: "+err), alert("success!"));
-	}
+			iniciarBD();
 		},
+			
 	
 		function(error) {
 			pgAlert('Error al subir imagen',error.code);
