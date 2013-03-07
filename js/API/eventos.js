@@ -21,9 +21,24 @@ $(document).ready(function(e){
 				pgAlert("Error",'Todos los campos son requeridos.');
 			}
 		});
+	//	$('div[data-role=collapsible]').click(function(){
+		
+		//$syncRegs();
+		
+		$('#prueSQL').tap(function(){
+			leerHistorial();
+		});
+		
+			
 	}, false);
 });
 
 function isLogin(){
 	return false;
+}
+
+function syncRegs(){
+	document.addEventListener("online", function(){
+		leerHistorial();
+	}, false);
 }

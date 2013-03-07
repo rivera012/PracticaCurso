@@ -18,7 +18,7 @@ function leeHistorial(){
 		function(tx1,results){
 			for(i=0; i< results.rows.length;i++){
 				
-				alert(result.rows[i].hId);
+				alert(result.rows.item(i).hId);
 			}
 			
 		},function(err){
