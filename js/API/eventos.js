@@ -26,7 +26,7 @@ $(document).ready(function(e){
 		//$syncRegs();
 		
 		$('#prueSQL').tap(function(){
-			leerHistorial();
+			leerReserva();
 		});
 		
 			
