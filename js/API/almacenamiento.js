@@ -5,6 +5,7 @@ function iniciarBD(){
 	db.transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXIST historial(hId unique, fecha, habitaciones, personas, estancia');
 		tx.executeSql('CREATE TABLE IF NOT EXIST reserva(hId unique, fecha, habitaciones, personas, estancia');
+		tx.executeSql('DELETE FROM reserva WHERE rID=1');
 	},function(err){
 		alert(err.code);
 		},function(){
@@ -18,7 +19,7 @@ function leeHistorial(){
 		function(tx1,results){
 			for(i=0; i< results.rows.length;i++){
 				
-				alert(result.rows.item(i).hId);
+				alert(results.rows.item(i).hId);
 			}
 			
 		},function(err){
